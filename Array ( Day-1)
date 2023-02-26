@@ -189,3 +189,47 @@ int main()
 	
 	return 0;
 }
+
+
+
+
+// Kadanes Algorithm:
+
+
+import java.util.*;
+public class kadanes {
+    static void kadns(int arr[], int  n){
+        int currSum = 0;
+        int maxSum = arr[0];
+        for (int i=0; i<n; i++)
+        {
+            currSum = currSum + arr[i];
+            if (currSum > maxSum)
+            {
+                maxSum = currSum;
+            }
+            if (currSum<0)
+            {
+                currSum = 0;
+            }
+        }
+//        System.out.println(currSum);
+        System.out.println(maxSum);
+    }
+    static void  inputEle(int arr[], int n){
+        Scanner obj = new Scanner(System.in);
+        for (int i=0; i<n; i++)
+        {
+            arr[i] = obj.nextInt();
+        }
+    }
+    public static void main(String[] args)
+    {
+        int n;
+        Scanner obj = new Scanner(System.in);
+        n = obj.nextInt();
+        int[] arr = new int[n];
+        inputEle(arr, n);
+        kadns(arr,n);
+    }
+
