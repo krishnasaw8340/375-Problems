@@ -1,6 +1,16 @@
 ARRAY : 06
 33. Search in Rotated Sorted Array
 
+
+ALGORITHM :
+Step-1:   Find the mid value mid = ( left + right) / 2
+Step-2:   Check the mid value to the left element arr[mid] >= arr[left]     // Uniformly Increases
+Step-3:   Apply binary search on half of the array
+Step-4:   If (search) < arr[mid] && (search) >= arr[left]
+Step-5:   Then Shift ( right = mid-1 )  Else left = mid+1;
+Step-6:   Else ( If (search > arr[mid] && search <=arr[right])
+Step-7:  Shift left = mid +1;
+Step-8:  Else right = mid-1;
 *******************************************************************************/
 import java.util.*;
 public class Main
