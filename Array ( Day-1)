@@ -1,6 +1,8 @@
 ARRAY : 06
 33. Search in Rotated Sorted Array
 
+You must write an algorithm with O(log n) runtime complexity.
+
 
 ALGORITHM :
 Step-1:   Find the mid value mid = ( left + right) / 2
