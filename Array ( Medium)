@@ -4,6 +4,7 @@ Algorithm :
 Step-1 : Creating an empty array with [-1,-1] Initially
 Step-2: First find the first occurence
 Step-3: Then last occurance
+Step-4: By using 2 Binary search 
 *******************************************************************************/
 import java.util.*;
 public class Main
