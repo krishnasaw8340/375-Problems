@@ -42,3 +42,34 @@ public class Main
 		printPermutation(a,0);
 	}
 }
+
+
+
+
+class Solution {
+    List<List<Integer>> result = new ArrayList<>();
+
+    public List<List<Integer>> permute(int[] nums) {
+        backtracking(nums, 0);
+        return result;
+    }
+
+    public void backtracking(int[] nums, int level) {
+        if(level == nums.length - 1) {
+            result.add(Arrays.stream(nums).boxed().collect(Collectors.toList()));
+            return;
+        }
+        for(int i = level;i < nums.length;i++) {
+            swap(nums, i, level);
+            backtracking(nums, level + 1);
+            swap(nums, i, level);
+        }
+    }
+
+    public void swap(int[] nums, int i, int j) {
+        int k = nums[i];
+        nums[i] = nums[j];
+        nums[j] = k;
+    }
+
+}
