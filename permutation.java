@@ -1,4 +1,5 @@
-Solution 1
+Solution 1:
+Using List
 
 class Solution {
 
